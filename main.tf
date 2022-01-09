@@ -21,7 +21,7 @@ EOF
 }
 
 resource "aws_lambda_function" "lambda" {
-  function_name = "api_example-${random_id.id.hex}-function"
+  function_name = "sheduler_example-${random_id.id.hex}-function"
 
   filename         = data.archive_file.lambda_zip.output_path
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
